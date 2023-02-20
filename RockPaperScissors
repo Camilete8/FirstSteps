@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>My First Game</title>
+        <script>
+            //  1 is rock, 2 is paper and 3 is scissors
+            function aleatorio(min, max){
+                return Math.floor( Math.random() * (max - min + 1) + min)
+            }
+            let player = 0
+            let min = 1
+            let max = 3   
+            let pc = aleatorio (1, 3) 
+            player = prompt("Choose: 1 for rock, 2 for paper y 3 for scissors")
+            // alert("You choose " + player)
+            if(player == 1){
+                alert("You choose rock")
+            } else if (player == 2) {
+                alert("You choose paper")
+            } else if (player == 3){
+                alert("You choose scissors")
+            } else {
+                alert("Please choose a valid value")
+            }
+            if(pc == 1){
+                alert("PC Choose rock")
+            } else if (pc == 2) {
+                alert("PC Choose paper")
+            } else if (pc == 3){
+                alert("PC Choose scissors")
+            } 
+            // COMBATE
+            if (pc == player){
+                alert("TIE")
+            } else if (player - pc == 1){
+                alert("YOU WIN")
+            } else if (player - pc == -2){
+                alert("YOU WIN")
+            } else {
+                alert("YOU LOSE")
+            }
+        </script>
+    </head>
+    <body>
+        <h1><B>ROCK, PAPER, SCISSORS</B></h1>
+
+    </body>
+</html>
